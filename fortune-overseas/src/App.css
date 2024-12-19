@@ -1,42 +1,109 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fdf5e6; /* Light beige background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Hero Section Layout */
+.hero-section {
+  display: flex;
+  width: 100%;
+  height: 80vh; /* Full viewport height */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px; /* Adds spacing on both sides */
+  box-sizing: border-box;
+  transition: background-color 1s ease-in-out;
+}
+
+/* Left Section */
+.left-section {
+  flex: 1;
+  left: 20px;
+}
+
+.text-box {
+  background-color: rgba(170, 170, 170, 0.5); /* Translucent black background */
+  border-radius: 10px; /* Rounded corners for a polished look */
+  padding: 20px;
+  width: 600px;
+  color: white; /* White text for contrast */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.company-name {
+  font-size: 4rem; /* Larger for hero section */
+  font-weight: bold;
+  color: white; /* Brown color */
+  margin-top: 15px;
+}
+
+.tagline-1{
+  font-size: 1.8rem;
+  color: black; /* Chocolate color */
+  margin-top: 15px;
+} 
+
+.tagline {
+  font-size: 1.2rem;
+  color: black; /* Chocolate color */
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/* Right Section - Carousel */
+.right-section {
+  flex: 1;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  width: 400px; /* Circular container size */
+  height: 400px; 
+}
+
+.carousel-item {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  animation: circular-motion 3s linear infinite;
+}
+
+/* Fixed Circular Motion: Right to Bottom */
+@keyframes circular-motion {
+  0% {
+    transform: translate(150px, -200px); /* Start at the top right */
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: translate(180px, -100px); /* Move slightly down */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  50% {
+    transform: translate(200px, 0); /* Reach rightmost center */
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  75% {
+    transform: translate(180px, 100px); /* Move towards bottom right */
+  }
+  100% {
+    transform: translate(150px, 200px); /* End near the bottom */
+  }
 }

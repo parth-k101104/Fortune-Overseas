@@ -1,0 +1,70 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar Container */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: burlywood;
+    color: black; /* White text */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 100px;
+  }
+  
+  /* Company Name */
+  .navbar-brand h1 {
+    font-family: 'Pacifico', cursive; /* Special font for company name */
+    font-size: 1.8rem;
+    margin: 0;
+    color: #562c17; 
+  }
+  
+  /* Navigation Links */
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  .navbar-links li {
+    display: inline;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    font-size: larger;
+    color: #562c17;
+  }
+  
+  /* Profile Section */
+  .navbar-profile {
+    font-size: 1rem;
+    color: #562c17; /* Golden color for profile text */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none; /* Hide links on smaller screens */
+    }
+  
+    .navbar-profile {
+      font-size: 0.9rem; /* Adjust profile font size */
+    }
+  }
